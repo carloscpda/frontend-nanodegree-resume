@@ -163,6 +163,10 @@ ul {
   display: none;
 }
 
+.projectpic {
+  height: 100px;
+}
+
 img {
   padding: 10px;
 }
