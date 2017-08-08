@@ -11,12 +11,12 @@ var bio = {
   "welcomeMessage": "You are protected, in short, by your ability to love! The only protection that can possibly work against the lure of power like Voldemort's! In spite of all the temptation you have endured, all the suffering, you remain pure of heart, just as pure as you were at the age of eleven, when you stared into a mirror that reflected your heart's desire, and it showed you only the way to thwart Lord Voldemort, and not immortality or riches.",
   "skills": ["Patronus Charm", "Transfiguration", "Stunning Spell", "Impediment Jinx", "Reductor Curse"],
   "biopic": "images/potter.jpg"
-}
+};
 
 bio.display = function() {
   var header = $('#header');
   var topContacts = $('#topContacts');
-  var footerContacts = $('#footerContacts')
+  var footerContacts = $('#footerContacts');
 
   var formattedName = HTMLheaderName.replace("%data%", bio.name);
   var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
@@ -51,8 +51,8 @@ bio.display = function() {
   bio.skills.forEach(function(skill) {
     var formattedSkill = HTMLskills.replace("%data%", skill);
     $('#skills').append(formattedSkill);
-  })
-}
+  });
+};
 
 var education = {
   "schools": [
@@ -80,7 +80,7 @@ var education = {
       "url": "http://harrypotter.wikia.com/wiki/Castelobruxo"
     }
   ]
-}
+};
 
 education.display = function() {
   var edu = $('#education');
@@ -99,7 +99,7 @@ education.display = function() {
     entry.append(formattedLocation);
     entry.append(formattedDate);
     entry.append(formattedMajor);
-  })
+  });
 
   entry.append(HTMLonlineClasses);
   education.onlineCourses.forEach(function(course) {
@@ -112,9 +112,9 @@ education.display = function() {
     entry.append(formattedName);
     entry.append(formattedDate);
     entry.append(formattedURL);
-  })
+  });
 
-}
+};
 
 
 var work = {
@@ -133,7 +133,7 @@ var work = {
       "description": "An Auror is a highly trained specialist officer who investigate crimes involving the Dark Arts and apprehend Dark Wizards."
     }
   ]
-}
+};
 
 work.display = function() {
   $('#workExperience').append(HTMLworkStart);
@@ -151,8 +151,8 @@ work.display = function() {
     entry.append(formattedLocation);
     entry.append(formattedDate);
     entry.append(formattedDescription);
-  })
-}
+  });
+};
 
 var projects = [
   {
@@ -165,7 +165,7 @@ var projects = [
       "images/pat3.png"
     ]
   }
-]
+];
 
 projects.display = function() {
   $('#projects').append(HTMLprojectStart);
@@ -183,9 +183,9 @@ projects.display = function() {
     project.images.forEach(function(image) {
       var formattedImage = HTMLprojectImage.replace("%data%", image);
       entry.append(formattedImage);
-    })
-  })
-}
+    });
+  });
+};
 
 bio.display();
 education.display();
